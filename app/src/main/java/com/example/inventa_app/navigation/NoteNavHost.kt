@@ -15,7 +15,6 @@ sealed class NavRoute(val route: String){
     object DocsScreen:NavRoute("docs_screen")
     object ItemsScreen:NavRoute("items_screen")
     object PostScreen:NavRoute("Post_screen")
-    object StaffScreen:NavRoute("staff_screen")
     object AddPostScreen:NavRoute("add_post_screen")
     object AddItemScreen:NavRoute("add_item_screen")
 
@@ -32,7 +31,6 @@ fun NoteNavHost(mViewModel: MainViewModel) {
         composable(NavRoute.DocsScreen.route){ DocsScreen(navController = navController, viewModel = mViewModel) }
         composable(NavRoute.ItemsScreen.route){ ItemsScreen(navController = navController, viewModel = mViewModel) }
         composable(NavRoute.PostScreen.route){ PostScreen(navController = navController, viewModel = mViewModel) }
-        composable(NavRoute.StaffScreen.route){ StaffScreen(navController = navController, viewModel = mViewModel) }
         composable(NavRoute.AddPostScreen.route){ AddPostScreen(navController = navController, viewModel = mViewModel) }
         composable(NavRoute.AddItemScreen.route){ AddItemScreen(navController = navController, viewModel = mViewModel) }
     }

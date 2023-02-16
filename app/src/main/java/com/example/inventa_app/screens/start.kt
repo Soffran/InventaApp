@@ -13,15 +13,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
 import com.example.inventa_app.MainViewModel
 import com.example.inventa_app.MainViewModelFactory
 import com.example.inventa_app.navigation.NavRoute
-import com.example.inventa_app.ui.theme.InventaAppTheme
+
 
 @Composable
 fun startScreen (navController: NavHostController, viewModel: MainViewModel) {
@@ -43,7 +41,7 @@ fun startScreen (navController: NavHostController, viewModel: MainViewModel) {
     ) { padding ->
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center,
+            verticalArrangement = Arrangement.Top,
             modifier = Modifier.fillMaxSize()
         )
         {
@@ -82,15 +80,6 @@ fun startScreen (navController: NavHostController, viewModel: MainViewModel) {
                     .padding(vertical = 15.dp, horizontal = 10.dp)
             ) {
                 Text(text = "Поставщики", fontSize = 24.sp)
-            }
-            Button(
-                onClick = {
-                    navController.navigate(route = NavRoute.StaffScreen.route)
-                }, modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 15.dp, horizontal = 10.dp)
-            ) {
-                Text(text = "Сотрудники", fontSize = 24.sp)
             }
 
         }
